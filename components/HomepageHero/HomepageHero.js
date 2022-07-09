@@ -35,7 +35,7 @@ const HomepageHero = () => {
     <section className={styles.section}>
       <p>
         <h1>Eurokurd test</h1>
-        <video
+        <video-js
           width="852"
           height="598"
           preload={"none"}
