@@ -11,7 +11,7 @@ export default function IndexPage() {
       videojs(videoRef.current, {
         sources: [
           {
-            src: "https://stream.mux.com/GJjLF93MGEmq4VfidIdZ4oMMAJRhEjSQ.m3u8",
+            src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
             type: "application/x-mpegURL",
           },
         ],
