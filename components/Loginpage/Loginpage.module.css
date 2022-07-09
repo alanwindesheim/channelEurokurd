@@ -1,0 +1,55 @@
+.section {
+  max-width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+}
+
+.login {
+  margin: 200px 0px 0px 0px;
+  padding: 20px;
+  place-self: center center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--color-light-yellow);
+}
+
+.login h1 {
+  place-self: center center;
+}
+
+.login p {
+  width: 290px;
+}
+
+.login button {
+  margin-left: 3px;
+  background-color: var(--color-blue);
+  color: white;
+  padding: 2px 5px 2px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout {
+  margin: 200px 0px 0px 0px;
+  padding: 20px;
+  place-self: center center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--color-light-yellow);
+}
+
+.logout h1 {
+  place-self: center center;
+  margin-bottom: 40px;
+}
+
+.logout button {
+  margin-left: 3px;
+  background-color: var(--color-blue);
+  color: white;
+  padding: 2px 5px 2px 5px;
+  border: none;
+  cursor: pointer;
+}
