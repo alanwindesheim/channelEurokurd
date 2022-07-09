@@ -38,6 +38,7 @@ const HomepageHero = () => {
         <video
           width="852"
           height="598"
+          preload={"none"}
           controls
           ref={videoRef}
           className="video-js"
