@@ -1,6 +1,8 @@
 import styles from "./Homepage.module.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { userContext } from "../../lib/context";
+import videojs from "video.js";
+import "video.js/dist/video-js.css";
 
 const HomepageHero = () => {
   const { plates, fetchPosts } = useContext(userContext);
@@ -14,20 +16,31 @@ const HomepageHero = () => {
     setPlateData(plates);
   }, [plates]);
 
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videojs(videoRef.current, {
+        sources: [
+          {
+            width: "500",
+            src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
+            type: "application/x-mpegURL",
+          },
+        ],
+      });
+    }
+  });
+
   return (
     <section className={styles.section}>
       <p>
-        <p>
-          Check out{" "}
-          <a
-            href="http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            radio
-          </a>
-          .
-        </p>
+        <video
+          width="852"
+          height="598"
+          controls
+          ref={videoRef}
+          className="video-js"
+        />
       </p>
       <div className={styles.grid}>
         {!!plateData.length &&
