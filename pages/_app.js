@@ -7,6 +7,10 @@ function MyApp({ Component, pageProps }) {
     <UserProvider>
       <Head>
         <title>SharePlate</title>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        ></meta>
       </Head>
 
       <div>
