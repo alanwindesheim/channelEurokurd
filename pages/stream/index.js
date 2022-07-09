@@ -13,6 +13,7 @@ export default function IndexPage() {
           {
             src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
             type: "application/x-mpegURL",
+            preload: "none",
           },
         ],
       });
