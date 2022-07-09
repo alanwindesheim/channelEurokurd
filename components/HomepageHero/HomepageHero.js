@@ -36,11 +36,13 @@ const HomepageHero = () => {
       <p>
         <h1>Eurokurd test</h1>
         <video-js
+          preload="none"
           width="852"
           height="598"
           controls
           ref={videoRef}
           className="video-js"
+          type="application/x-mpegURL"
         />
       </p>
       <div className={styles.grid}>

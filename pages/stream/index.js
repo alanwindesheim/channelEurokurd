@@ -26,7 +26,15 @@ export default function IndexPage() {
       <Link href="/about">
         <a>About</a>
       </Link>
-      <video controls ref={videoRef} className="video-js" />
+      <video-js
+        preload="preload"
+        width="852"
+        height="598"
+        controls
+        ref={videoRef}
+        className="video-js"
+        type="application/x-mpegURL"
+      />
     </div>
   );
 }
