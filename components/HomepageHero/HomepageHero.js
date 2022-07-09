@@ -34,6 +34,7 @@ const HomepageHero = () => {
   return (
     <section className={styles.section}>
       <p>
+        <h1>Eurokurd test</h1>
         <video
           width="852"
           height="598"
