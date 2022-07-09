@@ -13,7 +13,10 @@ export default function IndexPage() {
           {
             src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
             type: "application/x-mpegURL",
-            preload: "none",
+            fluid: true,
+            autoplay: true,
+            nativeAudioTracks: false,
+            nativeVideoTracks: false,
           },
         ],
       });
@@ -26,14 +29,12 @@ export default function IndexPage() {
       <Link href="/about">
         <a>About</a>
       </Link>
-      <video-js
-        preload="preload"
+      <video
         width="852"
         height="598"
         controls
         ref={videoRef}
         className="video-js"
-        type="application/x-mpegURL"
       />
     </div>
   );

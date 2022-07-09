@@ -22,9 +22,9 @@ const HomepageHero = () => {
       videojs(videoRef.current, {
         sources: [
           {
-            width: "500",
             src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
             type: "application/x-mpegURL",
+            overrideNative: true,
           },
         ],
       });
@@ -34,15 +34,13 @@ const HomepageHero = () => {
   return (
     <section className={styles.section}>
       <p>
-        <h1>Eurokurd test</h1>
-        <video-js
-          preload="none"
+        <h1>Eurokurd</h1>
+        <video
           width="852"
           height="598"
           controls
           ref={videoRef}
           className="video-js"
-          type="application/x-mpegURL"
         />
       </p>
       <div className={styles.grid}>
@@ -54,6 +52,7 @@ const HomepageHero = () => {
                   <iframe
                     src={plate.title}
                     frameBorder="0"
+                    currentTime="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
