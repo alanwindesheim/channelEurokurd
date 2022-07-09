@@ -26,7 +26,6 @@ export default function IndexPage() {
         <a>About</a>
       </Link>
       <video
-        data-setup='{"loop": true, "autoplay": true, "loadingSpinner": false}'
         muted="muted"
         width="852"
         height="598"
