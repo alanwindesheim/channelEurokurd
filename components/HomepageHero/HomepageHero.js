@@ -9,6 +9,7 @@ import ig from "../../public/images/instagram.svg";
 import fb from "../../public/images/facebook.svg";
 import yt from "../../public/images/youtube.svg";
 import mail from "../../public/images/Mail.svg";
+import phone from "../../public/images/Phone.svg";
 
 const HomepageHero = () => {
   const { plates, fetchPosts } = useContext(userContext);
@@ -28,7 +29,6 @@ const HomepageHero = () => {
       videojs(videoRef.current, {
         sources: [
           {
-            width: "500",
             src: "http://eurokurd.mymediapc.net:40/live/Eurokurd/playlist.m3u8",
             type: "application/x-mpegURL",
           },
@@ -99,7 +99,7 @@ const HomepageHero = () => {
             </div>
             <div>
               <a
-                href="mailto: abc@example.com"
+                href="mailto: eurokurd19@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -112,19 +112,48 @@ const HomepageHero = () => {
                 />
               </a>
             </div>
+            <div>
+              <a
+                href="tel:123-456-7890"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className={styles.icon}
+                  src={phone}
+                  width={30}
+                  height={30}
+                  alt="eurokurd tv channel"
+                />
+                {/* 0046700182651 */}
+              </a>
+            </div>
           </div>
         </nav>
       </header>
-      {/* <section className={styles.section}>
-        <video
-          width="852"
-          height="598"
-          controls
-          ref={videoRef}
-          className="video-js"
-        />
 
-        <div className={styles.grid}>
+      {/* 
+      d
+      d
+      d
+      section */}
+      <section className={styles.section}>
+        <div className={styles.video}>
+          <div className="video-js-responsive-container vjs-hd">
+            {" "}
+            <video
+              controls
+              ref={videoRef}
+              fluid={true}
+              width="640"
+              height="264"
+              className={`video-js vjs-default-skin vjs-4-3
+            ${styles.videoFrame}`}
+            />
+          </div>
+        </div>
+
+        {/* <div className={styles.grid}>
           {!!plateData.length &&
             plateData.map((plate) => (
               <div className={styles.div2Child} key={plate.id}>
@@ -142,8 +171,8 @@ const HomepageHero = () => {
                 )}
               </div>
             ))}
-        </div>
-      </section> */}
+        </div> */}
+      </section>
     </>
   );
 };
