@@ -5,10 +5,10 @@ import videojs from "video.js";
 import Image from "next/image";
 import "video.js/dist/video-js.css";
 import logo from "../../public/images/logoEurokurd.png";
-import ig from "../../public/images/instagram.png";
-import fb from "../../public/images/facebook.png";
-import yt from "../../public/images/youtube.png";
-import mail from "../../public/images/Mail.png";
+import ig from "../../public/images/instagram.svg";
+import fb from "../../public/images/facebook.svg";
+import yt from "../../public/images/youtube.svg";
+import mail from "../../public/images/Mail.svg";
 
 const HomepageHero = () => {
   const { plates, fetchPosts } = useContext(userContext);
